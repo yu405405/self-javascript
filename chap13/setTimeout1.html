@@ -4,17 +4,18 @@
     <button>ボタン</button>
     <script>
         function sleep(ms) {
-            setTimeout(function () {
-                alert("sleep関数が完了しました。");
-            }, ms);
+            setTimeout(function() {
+                alert('sleep関数が完了しました。')
+            }, ms)
         }
-        sleep(3000); // sleep関数を実行
 
-        const btn = document.querySelector("button");
+        sleep(3000)
+
+        const btn = document.querySelector('button')
         function clickHandler() {
-            alert("ボタンがクリックされました。");
+            alert('ボタンがクリックされました')
         }
-        btn.addEventListener("click", clickHandler);
+        btn.addEventListener('click', clickHandler)
     </script>
 </body>
 

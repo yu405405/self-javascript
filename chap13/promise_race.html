@@ -1,28 +1,23 @@
 <script>
-    // resolve()を100ミリ秒後に実行するPromiseインスタンス
     const myResolve = new Promise(resolve => {
         setTimeout(() => {
-            resolve("resolveが呼ばれました。");
-            console.log("myResolveの実行が終了しました。");
-        }, 100);
-    });
-    // reject()を200ミリ秒後に実行するPromiseインスタンス
-    const myReject = new Promise((_, reject) => {
+            resolve('resolveが呼ばれました')
+            console.log('myResolveの実行が終了しました。')
+        }, 100)
+    })
+
+    const myReject = new Promise((resolve, reject) => {
         setTimeout(() => {
-            reject("rejectが呼ばれました。");
-            console.log("myRejectの実行が終了しました。");
-        }, 200);
-    });
-    Promise.race([myReject, myResolve])
+            reject('rejectが呼ばれました。')
+            console.log('myRejectの実行が終了しました。')
+        }, 200)
+    })
+
+    Promise.race([myResolve, myReject])
         .then(value => {
-            console.log(value);
-        }).catch(value => {
-            console.log(value);
-        }).finally(() => {
-            console.log("finallyが呼ばれました。");
-        });
-    // > myResolveの実行が終了しました。
-    // > resolveが呼ばれました。 
-    // > finallyが呼ばれました。 
-    // > myRejectの実行が終了しました。
+            console.log(value)
+        })
+        .catch(value => {
+            console.log(value)
+        })
 </script>

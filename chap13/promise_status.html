@@ -2,16 +2,13 @@
     let promResolve, promReject;
 
     const prom = new Promise((resolve, reject) => {
-        promResolve = resolve;           // ---- resolveへの参照をpromResolveに保持
-        promReject = reject;             // ---- resolveへの参照をpromRejectに保持
-    });
+        promResolve = resolve
+        promReject = reject
+    })
 
-    console.log(prom);
-    // > Promise {<pending>}
+    console.log(prom)
 
-    promResolve('引数');                      
-    // promReject();
+    promResolve('引数')
 
-    console.log(prom);
-    // > Promise {<fulfilled>: '引数'}
+    console.log(prom)
 </script>

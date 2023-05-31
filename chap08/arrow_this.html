@@ -1,16 +1,19 @@
 <script>
-    window.name = "花子";
+    window.name = '花子'
+
     const taro = {
-        name: "太郎",
-        hello: function () {
+        name: '太郎',
+        hello: function() {
             const jiro = {
-                name: "次郎",
+                myName: '次郎',
                 hello: () => {
-                    console.log("こんにちは、" + this.name); アロー関数はthisを持たない
+                    console.log(`こんにちは、${this.myName}`)
+                    console.log(this)
                 }
-            };
-            jiro.hello();
+            }
+            jiro.hello()
         }
-    };
-    taro.hello();
+    }
+
+    taro.hello()
 </script>

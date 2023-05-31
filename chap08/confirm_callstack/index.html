@@ -1,4 +1,6 @@
 <script>
+    // "use strict"
+    
     function first() {
         let firstVal = "firstコンテキスト";
         second();
@@ -6,8 +8,17 @@
 
     function second() {
         let secondVal = "secondコンテキスト";
-        debugger;
+        // debugger;
     }
     
     first();
+
+
+    const taro = {
+        name: '次郎',
+        hello: function() {
+            console.log(`こんにちは、${this.name}`)
+        }
+    }
+    taro.hello()
 </script>

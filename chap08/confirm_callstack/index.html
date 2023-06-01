@@ -3,22 +3,36 @@
     
     function first() {
         let firstVal = "firstコンテキスト";
+        console.log(firstVal)
         second();
     }
 
     function second() {
         let secondVal = "secondコンテキスト";
+        console.log(secondVal)
         // debugger;
     }
     
     first();
 
 
-    const taro = {
-        name: '次郎',
-        hello: function() {
-            console.log(`こんにちは、${this.name}`)
-        }
+    // const taro = {
+    //     name: '太郎',
+    //     hello: function() {
+    //         console.log(`こんにちは、${this.name}さん`)
+    //     }
+    // }
+
+    // taro.hello()
+
+
+
+
+    window.name = "花子"
+
+    function hello() {
+        console.log(`こんにちは、${this.name}さん`)
     }
-    taro.hello()
+
+    hello()
 </script>

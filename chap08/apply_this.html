@@ -1,8 +1,21 @@
 <script>
-    const taro = { name: "太郎" };
-    function hello(greeting, name) {
-        console.log(`${greeting}、${name}`);
-    }
-    // 引数を配列で束縛して関数helloを実行！！
-    hello.apply(null, ["こんにちは", "太郎"]);
+    // const taro = {
+    //     name: '太郎'
+    // }
+
+    // function hello(greeting, name) {
+    //     console.log(`${greeting}、${this.name}さん`)
+    // }
+
+    // hello.apply(taro, ['こんにちは', '次郎'])
+
+
+
+    // const vals = [1, 2, 3]
+    // console.log(Math.max(vals[0], vals[1], vals[2]))
+
+
+
+    const vals = [1, 2, 3]
+    console.log(Math.max.apply(null, vals))
 </script>

@@ -5,15 +5,13 @@
         name: '太郎',
         hello: function() {
             const jiro = {
-                myName: '次郎',
+                name: '次郎',
                 hello: () => {
-                    console.log(`こんにちは、${this.myName}`)
-                    console.log(this)
+                    console.log(`こんにちは、${this.name}さん`)
                 }
             }
             jiro.hello()
         }
     }
-
     taro.hello()
 </script>

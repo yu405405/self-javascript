@@ -1,12 +1,22 @@
 <script>
+    window.name = '四郎'
+    let name = '三郎'
+    console.log(name + '?')
+
+    console.log(window)
+    console.log(window.window)
+
     function hello(greeting) {
-        console.log(greeting + this.name);
+        console.log(this.name + '!')
+        console.log(greeting + this.name)
     }
+
     const taro = {
-        name: "太郎"
+        name: '太郎'
     }
-    // bindでthisと引数を束縛
-    const helloTaro = hello.bind(taro, "こんにちは、");
-    helloTaro();
-    // > こんにちは、太郎
+
+    // const helloTaro = hello.bind(taro, '元気ですか？')
+    // helloTaro()
+
+    hello('こんにちは')
 </script>

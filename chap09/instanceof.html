@@ -1,9 +1,32 @@
 <script>
-    class Parent { }
-    class Child extends Parent { }
-    const obj = new Child;
-    console.log(obj instanceof Child);
-    // > true
-    console.log(obj instanceof Parent);
-    // > true
+    class Parent {
+
+    }
+
+    class Child extends Parent {
+
+    }
+
+    const obj = new Child
+
+    console.log(obj instanceof Child)
+    console.log(obj instanceof Parent)
+
+    console.log(obj instanceof Object)
+
+    console.log(Object())
+
+    console.log(('----------------------------'))
+
+
+    class Person {
+        constructor() {
+            this.name = '太郎'
+        }
+    }
+
+    const taro = new Person()
+    console.log(taro)
+    console.log(taro.hasOwnProperty('name'))
+
 </script>

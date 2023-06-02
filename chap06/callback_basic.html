@@ -1,16 +1,26 @@
 <script>
     function saySomething(callback) {
-        const result = callback();
-        console.log(`${result}、独習太郎！ `);
+        const result = callback()
+        console.log(`${result}、独習太郎!`)
     }
+
+    const fight = function() {
+        return 'がんばれ！'
+    }
+
     function hello() {
-        return "こんにちは";
+        return 'こんにちは'
     }
+
     function bye() {
-        return "さようなら";
+        return 'さようなら'
     }
-    saySomething(hello);
-    // > こんにちは、独習太郎！
-    saySomething(bye);
-    // > さようなら、独習太郎！
+
+    // console.log(hello())
+
+    saySomething(fight)
+    saySomething(hello)
+    saySomething(bye)
+    console.log(hello())
+    saySomething(hello()) // hello()の実行結果がcallbackに渡されるの = エラー
 </script>

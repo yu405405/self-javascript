@@ -1,14 +1,12 @@
 <script>
-    /* 無名関数ではargumentsを使用できる */
-    const hello = function () {
-        console.log("こんにちは、" + arguments[0]);
+    const hello = function() {
+        console.log(`こんにちは、${arguments[0]}さん`)
     }
-    hello("独習太郎");
-    // > こんにちは、独習太郎
 
-    /* アロー関数内ではargumentsは使用できない */
-    const hello = () => {
-        console.log("こんにちは、" + arguments[0]); // エラーが発生！
+    hello('田中')
+
+    const evening = () => {
+        console.log(`こんばんは、${arguments[0]}さん`)
     }
-    hello("独習太郎");
+    evening('山本')
 </script>

@@ -1,7 +1,10 @@
 <script>
-    function hello() {
-        console.log("こんにちは");
+    setTimeout(() => {
+        console.log('hello')
+    }, 1000)
+
+    function call() {
+        console.log('callの呼び出し')
     }
-    setTimeout(hello, 3000); // 3秒後に以下のメッセージが表示される
-    // > こんにちは
+    setTimeout(call, 2000)
 </script>

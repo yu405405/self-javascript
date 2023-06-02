@@ -1,8 +1,6 @@
 <script>
-    // 関数の作成
-    const add = new Function("val1", "val2", " return val1 + val2;");
-    // 関数（add）の実行
-    const result = add(1, 2);
-    console.log(result);
-    // > 3
+    const add = new Function("val1", "val2", "return val1 + val2")
+    console.log(add(11, 3))
+
+    eval('console.log(2 + 4)')
 </script>

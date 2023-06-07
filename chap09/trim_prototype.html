@@ -1,9 +1,13 @@
 <script>
-    function Test() { }
-    Test.prototype.hello = function () { console.log("こんにちは") };
-    const instance = new Test;
-    console.log(instance.__proto__.hello === instance.hello); // __proto__の関数と一致
-    // > true
-    instance.hello(); // __proto__は省略可能！
-    // > こんにちは
+    function Test() {
+
+    }
+    Test.prototype.hello = function() {
+        console.log('こんにちは')
+    }
+    const instance = new Test()
+    instance.__proto__.hello()
+    instance.hello()
+
+    console.log(instance.__proto__.hello() === instance.hello())
 </script>

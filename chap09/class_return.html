@@ -1,10 +1,11 @@
 <script>
     class TestCls {
         constructor() {
-            this.prop = "値"; // return文があるためthisは無視される
-            return { test: "returnで返されたオブジェクト" };
+            this.prop = "値"
+            return { test: "returnで返されたオブジェクト"}
         }
     }
-    console.log(new TestCls);
-    // > { test: "returnで返されたオブジェクト" };
+
+    const obj = new TestCls
+    console.log(obj)
 </script>

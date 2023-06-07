@@ -1,23 +1,42 @@
 <script>
-    // 親のコンストラクタを宣言
-    function Parent() { }
-    // 子のコンストラクタを宣言
-    function Child() { }
-    // 親のプロトタイプにメソッドを追加
-    Parent.prototype.parentMethod = function () {
-        console.log("親のメソッド");
-    }
-    // 親のプロトタイプを継承
-    Child.prototype = Object.create(Parent.prototype); // ❶
-    // 子のプロトタイプにメソッドを追加
-    Child.prototype.childMethod = function () { // ❷
+    function Parent() {}
 
-        console.log("子のメソッド");
+    function Child() {}
+
+    Parent.prototype.parentMethod = function() {
+        console.log('親のメソッド')
     }
-    // インスタンス化
+    Parent.prototype.myMethod = function() {
+        console.log('私のメソッド')
+    }
+
+    Child.prototype = Object.create(Parent.prototype)
+
+    Child.prototype.childMethod = function() {
+        console.log('子のメソッド')
+    }
+
+    console.log(new Parent)
     const childObj = new Child;
-    childObj.parentMethod();
-    // > 親のメソッド
-    childObj.childMethod();
-    // > 子のメソッド
+    console.log(childObj)
+    childObj.parentMethod()
+    childObj.childMethod()
+    childObj.myMethod()
+
+
+    function Parent(parentProp) {
+        this.parentProp = parentProp
+    }
+
+    function Child(childProp, parentProp) {
+        Parent.call(this, parentProp);
+        this.childProp = childProp
+    }
+
+    const child = new Child('子プロパティ', '親プロパティ')
+    console.log(child)
+
+
+    const noNameObj = new function(){}
+    console.log(noNameObj.__proto__)
 </script>

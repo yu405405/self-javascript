@@ -1,12 +1,13 @@
 <script>
     class Test {
-        hello() { console.log("こんにちは") };
+        hello() {
+            console.log('こんにちは')
+        }
     }
-    const instance = new Test;
-    Test.prototype.hello();
-    // > こんにちは
-    instance.__proto__.hello();
-    // > こんにちは
-    instance.hello();
-    // > こんにちは
+
+    const instance = new Test
+    console.log(instance.__proto__.hello() === instance.hello())
+    instance.__proto__.hello()
+    instance.hello()
+    
 </script>

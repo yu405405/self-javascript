@@ -1,34 +1,31 @@
 <script>
-    /**
-     *  配列オブジェクトのシャローコピー
-     */
-    const original = ["元の値"];
-    const copied = original; // アドレスを複製
-    copied[0] = "変更後の値";
-    console.log(original[0]);
-    // > 変更後の値
+    // シャローコピー
+    // const original = ['元の値']
+    // console.log(original[0])
+    // const copied = original
 
-    /**
-     * 配列オブジェクトのディープコピー
-     **/
-    // const original = ["元の値"];
-    // const copied = original.concat(); // 同じ要素を保持する配列を新しく作成
-    // copied[0] = "変更後の値";
-    // console.log(original[0]);
-    // > 元の値
+    // copied[0] = '変更後の値だよ'
+    // console.log(original[0])
 
-    /**
-     * 配列が多階層の場合
-     **/
-    // const original = [
-    //     "1階層目の値",
-    //     ["2階層目の値"]
-    // ];
-    // const copied = original.concat(); // 同じ要素を保持する配列を新しく作成
-    // copied[0] = "変更後の値"; // 1階層目の値を変更
-    // copied[1][0] = "変更後の値"; // 2階層目の値を変更
-    // console.log(original[0]);
-    // // > 1階層目の値 1階層目はoriginalには影響なし
-    // console.log(original[1][0]);
-    // // > 変更後の値 2階層目はoriginalの値も変わる
+
+    // ディープコピー
+    // const original = ['元の値']
+    // const copied = original.concat()
+    // console.log(copied[0])
+
+    // copied[0] = '変更後の値'
+    // console.log(original[0])
+
+
+    const original = [
+        '1階層目の値',
+        [
+            '2階層目の値'
+        ]
+    ]
+    const copied = original.concat()
+    copied[0] = '変更後の値'
+    copied[1][0] = '変更後の値'
+    console.log(original[0])
+    console.log(original[1][0])
 </script>

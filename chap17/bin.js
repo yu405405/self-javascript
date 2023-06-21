@@ -1,1 +1,1 @@
-console.log("JSファイルを実行します。");
+console.log('JSファイルを実行します')

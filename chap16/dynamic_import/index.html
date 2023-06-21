@@ -1,4 +1,20 @@
 <script>
+    let promise = import('./module.js')
+    console.log(promise)
+
+    promise.then(function(a) {
+        a.exportedFn()
+    })
+
+    async function asyncFunction() {
+        let { exportedFn } = await import('./module.js')
+        exportedFn()
+    }
+    asyncFunction()
+
+</script>
+
+<!-- <script>
     // Promiseオブジェクトでラップされたモジュールオブジェクトが渡される。
     let promise = import("./module.js");
     promise.then(moduleObject => {
@@ -11,4 +27,4 @@
         exportedFn(); // エクスポートされた関数を実行可能
     }
     asyncFunction();
-</script>
+</script> -->

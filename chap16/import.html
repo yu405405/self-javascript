@@ -1,4 +1,20 @@
 <script type="module">
+    import { exportedVariable, exportedFunction, ExportedClass } from '/path/to/module.js'
+
+    import { exportedName as importedName } from '/path/to/module.js'
+
+    import * as moduleObject from '/path/to/module.js'
+
+    import defaultExport from '/path/to/module.js'
+
+    import defaultExport, { namedExport1, namedExport2 } from '/path/to/module.js'
+
+    import defaultExport, * as moduleObject from '/path/to/module.js'
+
+    import '/path/to/module.js'
+</script>
+
+<!-- <script type="module">
     // 名前付きエクスポートをインポート
     import { exportedVariable, exportedFunction, ExportedClass } from "/path/to/module.js";
 
@@ -20,4 +36,4 @@
 
     // インポートなしにモジュール（module.js）内のコードを一度だけ実行
     import "/path/to/module.js";
-</script>
+</script> -->
